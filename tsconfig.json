@@ -15,10 +15,20 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "types": ["node", "jest"],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@components": ["./src/components/*"],
+      "@layout": ["./src/components/layout/*"],
+      "@ui": ["./src/components/ui/*"]
     }
   },
   "files": ["global.d.ts"],
-  "include": ["src", "custom.d.ts", "global.d.ts"]
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./types/**/*.d.ts",
+    "custom.d.ts",
+    "global.d.ts"
+  ]
 }
